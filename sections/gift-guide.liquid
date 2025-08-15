@@ -1,0 +1,89 @@
+
+<section class="gift-guide">
+  <div class="gift-content">
+    <h1>The Gift Guide</h1>
+    <p>Discover joy: Your ultimate holiday gift destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.</p>
+    <a href="#" class="btn-shop">SHOP NOW</a>
+  </div>
+
+  <div class="side-text left">SUSTAINABLE ETHICALLY MADE CLOTHES</div>
+  <div class="side-text right">Find the ideal gift for your loved ones</div>
+  <div class="choose-gift">CHOOSE GIFT →</div>
+
+  <div class="background-icons">
+    <!-- Example SVG Icons (replace with your own SVGs) -->
+    <svg width="80" height="80" viewBox="0 0 24 24"><path fill="none" stroke="black" stroke-width="2" d="M3 3h18v18H3z"/></svg>
+    <svg width="80" height="80" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="black" fill="none"/></svg>
+    <!-- Repeat more icons -->
+  </div>
+</section>
+
+<style>
+.gift-guide {
+  position: relative;
+  background-color: white;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.gift-content {
+  max-width: 500px;
+}
+
+.gift-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.gift-content p {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.btn-shop {
+  display: inline-block;
+  padding: 12px 30px;
+  background: black;
+  color: white;
+  text-decoration: none;
+}
+
+.side-text {
+  position: absolute;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.side-text.left {
+  left: 10px;
+  top: 50%;
+}
+
+.side-text.right {
+  right: 10px;
+  top: 50%;
+}
+
+.choose-gift {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: yellow;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.background-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  opacity: 0.2; /* faint background effect */
+}
+</style>
