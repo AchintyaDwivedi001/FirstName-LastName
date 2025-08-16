@@ -118,11 +118,11 @@
         "collection_color_scheme": "default"
       }
     },
-    "custom_liquid_UJyMKR": {
+    "custom_liquid_NkCK8h": {
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
       "settings": {
-        "custom_liquid": "<div style=\"background-color:#fff; padding:20px; font-family:sans-serif;\">\n  <h1 style=\"font-size:40px; font-weight:bold;\">The Gift Guide</h1>\n  <p>Discover joy: Your ultimate holiday gift destination...</p>\n  <a href=\"#\" style=\"display:inline-block; background:black; color:white; padding:10px 20px; text-decoration:none;\">Shop Now →</a>\n  \n  <div style=\"margin-top:40px; display:grid; grid-template-columns:repeat(4, 1fr); gap:20px;\">\n    <div style=\"border:1px solid #ddd; padding:20px; text-align:center;\">Item 1</div>\n    <div style=\"border:1px solid #ddd; padding:20px; text-align:center;\">Item 2</div>\n    <div style=\"border:1px solid #ddd; padding:20px; text-align:center;\">Item 3</div>\n    <div style=\"border:1px solid #ddd; padding:20px; text-align:center;\">Item 4</div>\n  </div>\n</div>",
+        "custom_liquid": "",
         "color_scheme": "",
         "section_width": "page-width",
         "padding-block-start": 0,
@@ -133,6 +133,6 @@
   "order": [
     "header_announcements_9jGBFp",
     "header_section",
-    "custom_liquid_UJyMKR"
+    "custom_liquid_NkCK8h"
   ]
 }
