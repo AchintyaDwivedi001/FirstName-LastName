@@ -1,0 +1,35 @@
+figma-grid_wrap{display:grid;grid-template-columns: repeat(3,minmax(0, 1fr)); gap: 24px}
+
+@media (max-width: 900px){.figma-grid_wrap{grid-template-columns: repeat(2, 1fr)}}
+
+@media (max-width:600px){.figma-grid_wrap{grid-template-columns:1fr}}
+
+figma-card{border: 1px solid #e5e7eb; border-radius:
+
+16px; overflow:hidden; background:#fff}
+
+5
+
+figma-card_link{width:100%; text-align: left; background: none; border: 0; padding: 0; cursor: pointer}
+
+figma-card_media img{width: 100%; display:block}
+
+figma-card meta{padding:12px 14px}
+
+figma-modal{max-width: 920px;width:92vw; border: 0; border-radius: 20px; box-
+
+shadow:0 40px 80px rgba(0,0,0,.25))
+
+figma-modal:: backdrop {background:rgba(0,0,0,.45)}
+
+figma-modal_close{position:absolute;right: 12px; top:10px;font-size:
+
+28px; background: none; border: 0; cursor:pointer}
+
+.variant-row{display: flex; flex-wrap:wrap;gap:8px; margin:8px 0}
+
+variant-row select,.variant-row button{padding: 10px 12px; border-radius:
+
+10px; border:1px solid #e5e7eb; background:#fff}
+
+figma-atc{display: inline-flex; align-items: center; gap:.5rem; padding:.875rem 1.25rem; border-radius: 9999px;border:0}
