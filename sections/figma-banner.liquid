@@ -1,0 +1,63 @@
+{% comment %} sections/figma-banner.liquid {% endcomment %}
+<style>
+  .figma-banner { position: relative; overflow: hidden; }
+  .figma-banner__wrap { max-width: 1200px; margin: 0 auto; padding: 40px 16px; }
+  .figma-banner__eyebrow { letter-spacing: .08em; text-transform: uppercase; }
+  .figma-banner__headline { line-height: 1.05; }
+  .figma-banner__subhead { opacity: .8; }
+  .btn-figma { display:inline-flex; align-items:center; gap:.5rem; padding:.875rem 1.25rem; border:1px solid currentColor; border-radius:9999px; transition: transform .15s ease, box-shadow .15s ease; }
+  .btn-figma:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.12); }
+</style>
+
+<div class="figma-banner">
+  <div class="figma-banner__wrap">
+    {% if section.settings.eyebrow != blank %}
+      <p class="figma-banner__eyebrow">{{ section.settings.eyebrow }}</p>
+    {% endif %}
+
+    {% if section.settings.headline != blank %}
+      <h1 class="figma-banner__headline" style="font-size:{{ section.settings.headline_size }}px">{{ section.settings.headline }}</h1>
+    {% endif %}
+
+    {% if section.settings.subhead != blank %}
+      <p class="figma-banner__subhead">{{ section.settings.subhead }}</p>
+    {% endif %}
+
+    <div class="figma-banner__buttons">
+      {% for block in section.blocks %}
+        {% if block.type == 'button' %}
+          <a class="btn-figma" href="{{ block.settings.link }}">{{ block.settings.label }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if section.settings.bg_image %}
+    <div class="figma-banner__bg" style="position:absolute;inset:0;z-index:-1;background:url({{ section.settings.bg_image | image_url: width: 2000 }}) center/cover no-repeat"></div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Figma Banner",
+  "settings": [
+    {"type": "image_picker", "id": "bg_image", "label": "Background image"},
+    {"type": "text", "id": "eyebrow", "label": "Eyebrow (small top text)"},
+    {"type": "text", "id": "headline", "label": "Headline"},
+    {"type": "range", "id": "headline_size", "min": 28, "max": 72, "step": 1, "unit": "px", "label": "Headline size", "default": 48},
+    {"type": "text", "id": "subhead", "label": "Subhead"}
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 2,
+      "settings": [
+        {"type": "text", "id": "label", "label": "Label", "default": "Shop now"},
+        {"type": "url", "id": "link", "label": "Link"}
+      ]
+    }
+  ],
+  "presets": [ { "name": "Figma Banner" } ]
+}
+{% endschema %}
